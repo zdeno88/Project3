@@ -1,9 +1,15 @@
+:root {
+  --background-color: #2199c3;
+}
+[data-theme="dark"] {
+  --background-color: black;
+}
 @media (max-width: 600px) {
   nav {
     display: none;
     position: absolute;
     top: 70px;
-    background-color: #2199c3;
+    background-color: var(--background-color);
     width: 100%;
   }
   li {
