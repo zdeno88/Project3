@@ -1,0 +1,40 @@
+@import url("https://fonts.googleapis.com/css2?family=Single+Day&display=swap");
+
+:root {
+  --backgroudColor: #2199c3;
+  --textColor: white;
+}
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 70px;
+  background-color: var(--backgroudColor);
+  position: fixed;
+  width: 100%;
+}
+li {
+  display: inline;
+  margin-right: 20px;
+  color: var(--textColor);
+  font-family: "Single Day", cursive;
+  font-size: 20px;
+}
+.menu-icon {
+  margin-right: 10px;
+  color: var(--textColor);
+  visibility: hidden;
+}
+#welcome div {
+  background-image: url(/img/dayCity.jpg);
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}

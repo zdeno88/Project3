@@ -1,0 +1,19 @@
+@media (max-width: 600px) {
+  nav {
+    display: none;
+    position: absolute;
+    top: 70px;
+    background-color: #2199c3;
+    width: 100%;
+  }
+  li {
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+  }
+  .menu-icon {
+    visibility: visible;
+    font-size: 23px;
+    margin-right: 20px;
+  }
+}
