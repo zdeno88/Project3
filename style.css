@@ -2,9 +2,10 @@
 
 :root {
   --backgroudColor: #2199c3;
+  --otherBackground: #8ed8f3;
   --textColor: white;
   --sliderColor: #ccc;
-  --welcomePicture: url(/img/dayCity.jpg);
+  --welcomePicture: url(./img/dayCity.jpg);
 }
 * {
   margin: 0px;
@@ -15,8 +16,9 @@
   color: var(--textColor);
 }
 [data-theme="dark"] {
-  --welcomePicture: url(/img/nightCity.jpg);
+  --welcomePicture: url(./img/nightCity.jpg);
   --backgroudColor: black;
+  --otherBackground: rgb(41, 40, 40);
 }
 .switcher-box {
   flex-grow: 1;
@@ -34,36 +36,6 @@
 }
 .switcher-description i {
   margin-left: 5px;
-}
-header {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  height: 70px;
-  background-color: var(--backgroudColor);
-  position: fixed;
-  width: 100%;
-}
-li {
-  display: inline;
-  margin-right: 20px;
-}
-.menu-icon {
-  margin-right: 10px;
-  visibility: hidden;
-}
-.menu-icon i {
-  font-size: 25px;
-}
-#welcome div {
-  background-image: var(--welcomePicture);
-  min-height: 100vh;
-  /* min-height: calc(100vh - 70px); */
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  /* position: relative;
-  top: 70px; */
 }
 
 /* The switch - the box around the slider */
@@ -127,4 +99,114 @@ input:checked + .slider:before {
 
 .slider.round:before {
   border-radius: 50%;
+}
+
+header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 70px;
+  background-color: var(--backgroudColor);
+  position: fixed;
+  width: 100%;
+}
+li {
+  display: inline;
+  margin-right: 20px;
+}
+li a {
+  text-decoration: none;
+}
+.menu-icon {
+  margin-right: 10px;
+  visibility: hidden;
+}
+.menu-icon i {
+  font-size: 25px;
+}
+.space {
+  height: 70px;
+}
+.welcomePicture {
+  background-image: var(--welcomePicture);
+  min-height: calc(100vh - 70px);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+#buildings {
+  height: 100vh;
+  background-color: var(--otherBackground);
+  text-align: center;
+}
+
+#buildings h1 {
+  padding: 20px;
+  font-size: 35px;
+}
+
+#form {
+  height: calc(100vh - 70px);
+  background-color: var(--otherBackground);
+  text-align: center;
+}
+#form h1 {
+  padding: 20px;
+  font-size: 35px;
+}
+.input-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.input-box input {
+  color: black;
+  text-align: center;
+  border-radius: 15px;
+  border: none;
+  outline: none;
+  padding: 9px;
+  margin: 5px;
+}
+.textPassword,
+.textEmail {
+  padding-right: 5px;
+}
+.textPasswordDiv,
+.textEmailDiv {
+  padding: 5px;
+}
+.ET {
+}
+.ET img {
+  height: 30vh;
+}
+.fa-arrow-up {
+  color: var(--backgroudColor);
+}
+
+.arrow {
+  background-color: white;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+arrow {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  visibility: hidden;
+}
+
+footer {
+  background-color: var(--backgroudColor);
+  text-align: center;
+}
+.tooter-text {
+  padding: 10px;
 }

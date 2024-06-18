@@ -4,37 +4,69 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="/style.css" />
-    <link rel="stylesheet" href="/query.css" />
-    <script src="/script.js" defer></script>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./query.css" />
+    <script src="./script.js" defer></script>
     <script
       src="https://kit.fontawesome.com/8ba26cb1dc.js"
       crossorigin="anonymous"
     ></script>
   </head>
   <body>
-    <section id="home">
-      <header>
-        <div class="switcher-box">
-          <span class="switcher-description">
-            <label class="switch">
-              <input type="checkbox" />
-              <span class="slider round"></span>
-            </label>
-            <p>Light mode</p>
-            <i class="fa-regular fa-sun"></i>
-          </span>
-        </div>
-        <nav>
-          <ul>
-            <li>Home</li>
-            <li>About us</li>
-            <li>Contact</li>
-          </ul>
-        </nav>
-        <div class="menu-icon"><i class="fa-solid fa-bars"></i></div>
-      </header>
+    <header id="home">
+      <div class="switcher-box">
+        <span class="switcher-description">
+          <label class="switch">
+            <input type="checkbox" />
+            <span class="slider round"></span>
+          </label>
+          <p>Light mode</p>
+          <i class="fa-regular fa-sun"></i>
+        </span>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#welcome">Home</a></li>
+          <li class="li-buildings">Buildings</li>
+          <li class="li-form">Form</li>
+          <li><a href="#footer">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="menu-icon"><i class="fa-solid fa-bars"></i></div>
+    </header>
+    <section id="welcome">
+      <div class="space"></div>
+      <div class="welcomePicture"></div>
     </section>
-    <section id="welcome"><div></div></section>
+    <section id="buildings"><h1>Buildings</h1></section>
+    <section id="form">
+      <h1>Form</h1>
+      <form>
+        <div class="input-box">
+          <input type="email" class="email" placeholder="Enter your email" />
+          <input type="text" class="heslo1" placeholder="Enter your password" />
+          <input type="text" class="heslo2" placeholder="Verify the password" />
+          <div class="textEmailDiv">
+            <span class="textEmail"></span><i class="fa-regular"></i>
+          </div>
+          <div class="textPasswordDiv">
+            <span class="textPassword"></span><i class="fa-regular"></i>
+          </div>
+        </div>
+      </form>
+      <div class="ET">
+        <img src="./img/pngegg.png" alt="ET" />
+      </div>
+    </section>
+    <arrow>
+      <div class="arrow"><i class="fa-solid fa-arrow-up"></i></div>
+    </arrow>
+    <footer id="footer">
+      <div class="tooter-text">
+        <p>email@gmail.com</p>
+        <p>Mobil: +420 755 265 456</p>
+        <p>© 2024 Computer s.r.o.</p>
+      </div>
+    </footer>
   </body>
 </html>
