@@ -4,6 +4,16 @@
 [data-theme="dark"] {
   --background-color: black;
 }
+@media (max-width: 520px) {
+  .buildings-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+  .buildings-img img {
+    height: 85%;
+    width: 85%;
+  }
+}
 @media (max-width: 600px) {
   nav {
     display: none;
@@ -21,5 +31,44 @@
     visibility: visible;
     font-size: 23px;
     margin-right: 20px;
+  }
+}
+@media (min-width: 950px) {
+  .buildings-grid {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+
+  .n5 {
+    grid-area: 2/2/2/3;
+  }
+  .n6 {
+    grid-area: 2/3/2/4;
+  }
+
+  .arrow {
+    background-color: white;
+    height: 50px;
+    width: 50px;
+  }
+}
+@media (min-width: 1270px) {
+  .buildings-img img {
+    height: 88%;
+    width: 88%;
+  }
+}
+@media (max-height: 850px) {
+  .tooter-text p {
+    font-size: 12px;
+  }
+}
+@media (max-height: 790px) {
+  .buildings-img img {
+    height: 85%;
+    width: 85%;
+  }
+  #buildings h1 {
+    padding: 20px;
   }
 }

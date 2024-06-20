@@ -69,15 +69,29 @@ formMenu.addEventListener("click", () => {
   window.scrollTo({ top: formConst, behavior: "smooth" });
 });
 
+const checkCorrection = (textClass, text, imgClass, addClass, removeClass) => {
+  textClass.textContent = text + " correct";
+  imgClass.classList.add(addClass);
+  imgClass.classList.remove(removeClass);
+};
+
 heslo2.addEventListener("input", () => {
   if (heslo1.value === heslo2.value) {
-    textPassword.textContent = "Password correct";
-    textPasswordCheck.classList.add("fa-circle-check");
-    textPasswordCheck.classList.remove("fa-circle-xmark");
+    checkCorrection(
+      textPassword,
+      "Password",
+      textPasswordCheck,
+      "fa-circle-check",
+      "fa-circle-xmark"
+    );
   } else {
-    textPassword.textContent = "Password uncorrect";
-    textPasswordCheck.classList.add("fa-circle-xmark");
-    textPasswordCheck.classList.remove("fa-circle-check");
+    checkCorrection(
+      textPassword,
+      "Password",
+      textPasswordCheck,
+      "fa-circle-xmark",
+      "fa-circle-check"
+    );
   }
 });
 
@@ -85,12 +99,20 @@ email.addEventListener("input", () => {
   const emailInput = email.value;
 
   if (emailInput.match(pattern)) {
-    textEmail.textContent = "Email correct";
-    textEmailCheck.classList.add("fa-circle-check");
-    textEmailCheck.classList.remove("fa-circle-xmark");
+    checkCorrection(
+      textEmail,
+      "Email",
+      textEmailCheck,
+      "fa-circle-check",
+      "fa-circle-xmark"
+    );
   } else {
-    textEmail.textContent = "Email uncorrect";
-    textEmailCheck.classList.add("fa-circle-xmark");
-    textEmailCheck.classList.remove("fa-circle-check");
+    checkCorrection(
+      textEmail,
+      "Email",
+      textEmailCheck,
+      "fa-circle-xmark",
+      "fa-circle-check"
+    );
   }
 });
