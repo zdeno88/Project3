@@ -156,6 +156,11 @@ li a {
   object-fit: cover;
 }
 
+.buildings-img:hover {
+  transform: scale(1.1);
+  transition: all 0.3s ease-in-out;
+}
+
 .buildings-img img {
   height: 100%;
   width: 100%;
@@ -226,4 +231,19 @@ footer {
 }
 .tooter-text {
   padding: 10px;
+}
+
+.nav-block {
+  display: block;
+}
+
+.nav-none {
+  display: none;
+}
+
+.arrow-visible {
+  visibility: visible;
+}
+.arrow-hidden {
+  visibility: hidden;
 }

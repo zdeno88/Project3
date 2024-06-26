@@ -30,10 +30,10 @@ const changeClass = (removeClass, addClass, elemnt) => {
 icon.addEventListener("click", () => {
   if (icon.classList.contains("fa-bars")) {
     changeClass("fa-bars", "fa-xmark", icon);
-    nav.style.display = "block";
+    changeClass("nav-none", "nav-block", nav);
   } else {
     changeClass("fa-xmark", "fa-bars", icon);
-    nav.style.display = "none";
+    changeClass("nav-block", "nav-none", nav);
   }
 });
 
@@ -51,9 +51,9 @@ switcher.addEventListener("change", (event) => {
 
 window.addEventListener("scroll", () => {
   if (window.scrollY >= 20) {
-    arrow.style.visibility = "visible";
+    changeClass("arrow-hidden", "arrow-visible", arrow);
   } else {
-    arrow.style.visibility = "hidden";
+    changeClass("arrow-visible", "arrow-hidden", arrow);
   }
 });
 
@@ -75,7 +75,7 @@ const checkCorrection = (textClass, text, imgClass, addClass, removeClass) => {
   imgClass.classList.remove(removeClass);
 };
 
-heslo2.addEventListener("input", () => {
+const checkPassword = () => {
   if (heslo1.value === heslo2.value) {
     checkCorrection(
       textPassword,
@@ -93,7 +93,10 @@ heslo2.addEventListener("input", () => {
       "fa-circle-check"
     );
   }
-});
+};
+
+heslo1.addEventListener("input", checkPassword);
+heslo2.addEventListener("input", checkPassword);
 
 email.addEventListener("input", () => {
   const emailInput = email.value;
